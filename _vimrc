@@ -4,7 +4,6 @@ behave mswin
 call pathogen#infect()
 
 set encoding=utf-8
-language messages en_US.ISO_8859-1
 set fileencodings=utf-8,cp949,euc-kr,ucs-bom,latin1
 
 set diffexpr=MyDiff()
