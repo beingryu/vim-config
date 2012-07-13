@@ -1,6 +1,8 @@
 set nocompatible
 behave mswin
 
+call pathogen#infect()
+
 set encoding=utf-8
 language messages en_US.ISO_8859-1
 set fileencodings=utf-8,cp949,euc-kr,ucs-bom,latin1
@@ -68,7 +70,6 @@ augroup being_filetypes
 	au FileType ruby,eruby,yaml,jade,javascript setlocal et sw=2 ts=2
 augroup END
 
-call pathogen#infect()
 let g:indent_guides_start_level=1
 let g:indent_guides_guide_size=2
 let g:indent_guides_enable_on_vim_startup=1
