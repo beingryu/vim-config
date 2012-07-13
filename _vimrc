@@ -62,6 +62,7 @@ if has('mouse')
 endif
 
 color mustang
+set background=dark
 
 au BufRead,BufNewFile *.eruby set ft=eruby
 
