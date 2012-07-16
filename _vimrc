@@ -5,6 +5,7 @@ call pathogen#infect()
 
 set encoding=utf-8
 set fileencodings=utf-8,cp949,euc-kr,ucs-bom,latin1
+language messages en_US.utf-8
 
 set diffexpr=MyDiff()
 function MyDiff()
@@ -38,8 +39,8 @@ set guifont=DejaVuSansNanumGothic:h10:cHANGEUL
 set backspace=indent,eol,start
 set hidden
 set wrap
-set ts=2
-set sw=2
+set ts=4
+set sw=4
 set smartcase
 set smarttab
 set incsearch
