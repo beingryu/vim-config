@@ -19,3 +19,6 @@
 [submodule "vimfiles/bundle/vim-addon-local-vimrc"]
 	path = vimfiles/bundle/vim-addon-local-vimrc
 	url = git://github.com/MarcWeber/vim-addon-local-vimrc.git
+[submodule "vimfiles/bundle/localvimrc"]
+	path = vimfiles/bundle/localvimrc
+	url = git://github.com/vim-scripts/localvimrc.git
