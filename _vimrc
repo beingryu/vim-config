@@ -1,8 +1,16 @@
 set nocompatible
-behave mswin
+" behave mswin
 
-call pathogen#infect()
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'flazz/vim-colorschemes'
+Bundle 'vim-scripts/localvimrc'
+Bundle 'croaker/mustang-vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'nathanaelkane/vim-indent-guides'
 
+filetype on
 set encoding=utf-8
 set fileencodings=utf-8,cp949,euc-kr,ucs-bom,latin1
 language messages en_US.utf-8
