@@ -77,12 +77,14 @@ endif
 
 color mustang
 set background=dark
+set t_ut=
 
 au BufRead,BufNewFile *.eruby set ft=eruby
+au BufRead,BufNewFile *.gradle set ft=groovy
 
 augroup being_filetypes
 	au!
-	au FileType ruby,eruby,yaml,jade,javascript setlocal et sw=2 ts=2
+	au FileType ruby,eruby,yaml,jade,javascript,scala setlocal et sw=2 ts=2
 augroup END
 
 " Start NERDTree if no files were specified
