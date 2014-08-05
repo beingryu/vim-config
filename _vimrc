@@ -2,13 +2,19 @@ set nocompatible
 " behave mswin
 
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
-Bundle 'flazz/vim-colorschemes'
-Bundle 'vim-scripts/localvimrc'
-Bundle 'croaker/mustang-vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'nathanaelkane/vim-indent-guides'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-scripts/localvimrc'
+Plugin 'vim-scripts/ShowMarks'
+Plugin 'kien/ctrlp.vim'
+Plugin 'croaker/mustang-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'scrooloose/syntastic'
+Plugin 'Lokaltog/vim-easymotion'
 
 filetype on
 set encoding=utf-8
@@ -78,6 +84,29 @@ augroup being_filetypes
 	au!
 	au FileType ruby,eruby,yaml,jade,javascript setlocal et sw=2 ts=2
 augroup END
+
+" Start NERDTree if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" Toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
+" Close NERDTree if the only window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+let g:EasyMotion_do_mapping = 0
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+map <Leader> <Plug>(easymotion-prefix)
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+nmap s <Plug>(easymotion-s2)
+nmap t <Plug>(easymotion-t2)
 
 let g:indent_guides_start_level=1
 let g:indent_guides_guide_size=1
