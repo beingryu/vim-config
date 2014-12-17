@@ -7,14 +7,13 @@ call vundle#rc()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-scripts/localvimrc'
-Plugin 'vim-scripts/ShowMarks'
 Plugin 'kien/ctrlp.vim'
 Plugin 'croaker/mustang-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'scrooloose/syntastic'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'leafgarland/typescript-vim'
 
 filetype on
 set encoding=utf-8
@@ -55,6 +54,7 @@ set hidden
 set wrap
 set ts=4
 set sw=4
+set et
 set smartcase
 set smarttab
 set incsearch
@@ -85,6 +85,7 @@ au BufRead,BufNewFile *.gradle set ft=groovy
 augroup being_filetypes
 	au!
 	au FileType ruby,eruby,yaml,jade,javascript,scala setlocal et sw=2 ts=2
+	au FileType typescript setlocal et sw=4 ts=4
 augroup END
 
 " Start NERDTree if no files were specified
@@ -94,6 +95,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 " Close NERDTree if the only window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let g:NERDTreeQuitOnOpen = 1
 
 let g:EasyMotion_do_mapping = 0
 map <Leader>j <Plug>(easymotion-j)
