@@ -14,6 +14,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'tpope/vim-fugitive'
 
 filetype on
 set encoding=utf-8
