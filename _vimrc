@@ -7,6 +7,7 @@ call vundle#rc()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-scripts/localvimrc'
+Plugin 'vim-scripts/django.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'croaker/mustang-vim'
 Plugin 'scrooloose/nerdtree'
@@ -15,6 +16,8 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'scrooloose/syntastic'
 
 filetype on
 set encoding=utf-8
@@ -118,3 +121,15 @@ let g:indent_guides_guide_size=1
 let g:indent_guides_enable_on_vim_startup=1
 let g:localvimrc_name='.local_vimrc'
 let g:localvimrc_sandbox=0
+
+set modeline
+set modelines=3
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
