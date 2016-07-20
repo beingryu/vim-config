@@ -2,8 +2,7 @@ set nocompatible
 " behave mswin
 
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+call plug#begin('~/vimfiles/plugged')
 Plugin 'gmarik/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-scripts/localvimrc'
@@ -18,6 +17,8 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'scrooloose/syntastic'
+Plugin 'drmikehenry/vim-fontsize'
+call plug#end()
 
 filetype on
 set encoding=utf-8
